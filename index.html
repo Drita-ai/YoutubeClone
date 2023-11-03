@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form">
+        <input type="text" name="name" id="name">
+        <button type="submit">Submit</button>
+    </form>
+
+    <h1 id="timer">00:00</h1>
+
+    <script>
+        const form = document.getElementById("form");
+        const name = document.getElementById("name")
+
+        form.addEventListener('submit' , onSubmit);
+
+        function onSubmit(){
+            if(name.value.length < 4) alert("small");
+            else if(name.value.length > 10) alert("big");
+        }
+    </script>
+
+    <script src="index.js"></script>
+    <script src="bomb.js"></script>
+</body>
+</html>
